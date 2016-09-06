@@ -5,7 +5,7 @@ RUN apk update && apk add --no-cache openjdk8 mysql-client && rm -f /var/cache/a
 
 RUN wget http://www.trieuvan.com/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
 RUN tar -zxvf apache-maven-3.3.9-bin.tar.gz
-RUN rm apache-maven-3.3.9-bin.tar.gz && apache-maven-3.3.9 /usr/lib/mvn
+RUN rm apache-maven-3.3.9-bin.tar.gz && mv apache-maven-3.3.9 /usr/lib/mvn
 
 ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
 ENV JAVA=$JAVA_HOME/bin
